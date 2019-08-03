@@ -24,7 +24,27 @@ body
 			border-color: red
 		&:required:valid
 			border-color: green
-
+a
+	color: $text
+	transition: .2s
+	position: relative
+	&:hover
+		color: lighten($text, 20%)
+		text-decoration: none
+		&:before
+			width: 100%
+			left: 0
+			opacity: 1
+	&:before
+		content: ''
+		height: 0.05em
+		width: 0
+		background: lighten($text, 20%)
+		position: absolute
+		bottom: -.5%
+		left: -10%
+		opacity: 0
+		transition: .1s
 .img-responsive
 	display: block
 	max-width: 100%
@@ -38,6 +58,126 @@ body
 b, strong
 	font-weight: bold
 
+header
+	height: 32.813em
+	background: url('../img/header-bg.png') bottom center no-repeat
+	background-size: cover
+	margin-bottom: 3.125em
+	.lead
+		font-size: 5.000em
+		font-weight: bold
+		line-height: 0.875em
+		margin-top: 0.625em
+		margin-bottom: 1.250em
+		font-weight: bold
+	.desc
+		font-size: 3.125em
+		font-weight: bold
+		line-height: 1.400em
+		margin-top: 1.000em
+		margin-bottom: 2.000em
+		font-weight: bold
 
+.calc
+	.head
+		font-size: 1.500em
+		font-weight: bold
+		margin-bottom: .3em
+		line-height: 1.3em
+	.text
+		font-size: 1.250em
+		line-height: 3em
+		input
+			padding: 0 10px
+			margin: 0 5px
+			cursor: pointer
+			background: transparent
+			border: none
+			border-bottom: 1px solid $text
+			width: 2em
+			height: 1.500em
+		span
+			margin: 0 5px
+			font-weight: bold
+			font-size: 1.200em
+
+.form
+	.head
+		font-size: 1.500em
+		font-weight: bold
+		margin-bottom: .3em
+		line-height: 1.3em
+	.text
+		font-size: 1.250em
+		line-height: 3em
+		input
+			padding: 0 10px
+			margin: 0 10px
+			cursor: pointer
+			background: transparent
+			border: none
+			border-bottom: 1px solid $text
+			width: 9.8em
+			height: 1.500em
+		a
+			font-weight: bold
+			font-size: 1.200em
+
+.why, .advantages
+	margin-bottom: 3.125em
+	.lead
+		font-size: 3.125em
+		font-weight: bold
+		margin-bottom: 1em
+	.item
+		font-size: 1.500em
+		font-weight: bold
+		line-height: 1.5em
+		margin-bottom: 4.167em
+		.item-img
+			width: 70px
+			height: 70px
+			margin-right: 1em
+			img
+				max-width: 60px
+		&.item-last
+			margin-bottom: 2.083em
+
+.results
+	display: block
+	background: url('../img/results-bg.png') top center no-repeat
+	background-size: cover
+	padding: 6.250em 0
+	.lead
+		font-size: 3.125em
+		font-weight: bold
+		margin-bottom: 1em
+	ul
+		display: inline-block
+		margin: 0
+		padding: 0
+		list-style-type: none
+		font-size: 1.500em
+		line-height: 2.4em
+		margin-bottom: 1.5em
+		width: 100%
+	.send	
+		font-size: 2em
+		font-weight: bold
+		display: block
+
+.map
+	display: block
+	background: url('../img/map-bg.png') top center no-repeat
+	background-size: cover
+	height: 28.750em
+footer
+	padding: 3.125em 0
+	.desc
+		font-size: 1.500em
+		font-weight: bold
+	.tel
+		font-size: 3.125em
+		font-weight: bold
 
 @import "media" // Always at the end
